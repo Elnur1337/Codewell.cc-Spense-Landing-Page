@@ -1,0 +1,410 @@
+:root {
+  --primaryColor: rgb(240, 238, 235);
+  --hColor: rgb(41, 41, 41);
+  --pColor: rgb(121, 121, 121);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #000;
+}
+i {
+  font-size: 2rem;
+}
+h2 {
+  color: var(--hColor);
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.what-is-spense,
+.uses,
+.our-editor {
+  color: var(--pColor);
+  line-height: 25px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  position: relative;
+  overflow-y: scroll;
+}
+header {
+  background: var(--primaryColor);
+  width: 100%;
+}
+.celebrate {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 12px 20px;
+}
+.receiving-earnings {
+  text-decoration: underline;
+}
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.logo {
+  font-weight: 500;
+}
+.nav-links,
+.login {
+  list-style-type: none;
+  display: none;
+}
+.mobile-nav {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100vw;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background: var(--primaryColor);
+  transition: left 0.3s ease-in-out;
+}
+.first-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.mobile-nav-ul li {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.li-last {
+  padding-bottom: 25px;
+}
+.hero {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image {
+  width: 100%;
+  height: 380px;
+  background: url(./Assets/Hero-Image-Mobile.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.list-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+.list-style-icons {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 7px;
+}
+.benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.list-style-icons i {
+  font-size: 20px;
+}
+.list-style-icons li,
+.benefits li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.benefits li {
+  color: var(--pColor);
+  font-weight: 600;
+  font-size: 16px;
+}
+.hero-email,
+.hero-btn {
+  border-radius: 5px;
+}
+.hero-email {
+  padding: 15px 26px 15px 26px;
+  max-width: 200px;
+  border: 2px solid gray;
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+.hero-email:focus,
+.hero-btn:focus {
+  outline: none;
+}
+::placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+.hero-btn {
+  padding: 15px 15px;
+  border: 2px solid #000;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.media {
+  padding: 0 20px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.media img {
+  width: 100px;
+}
+.media > img:not(:last-child) {
+  margin-right: 20px;
+}
+.pinterest,
+.twitter,
+.reddit,
+.google,
+.slack {
+  display: none;
+}
+.media .facebook {
+  margin-left: 20px;
+}
+.secure {
+  margin: 0 20px;
+  height: 650px;
+  padding: 30px 30px 0px 30px;
+  background: url(./Assets/phone-mockup-mobile.png), var(--primaryColor);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+.learn-escrow {
+  text-decoration: underline;
+  font-weight: 700;
+  color: var(--pColor);
+}
+.uses {
+  margin-bottom: 20px;
+}
+.text-editor {
+  margin: 0 20px;
+  margin-bottom: 20px;
+}
+.text-editor img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 39px;
+}
+footer {
+  background: #000;
+  padding: 50px 20px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "s s s s s s s s s s s s"
+    "s s s s s s s s s s s s"
+    "c c c c . . . . o o o o"
+    "c c c c . . . . o o o o"
+    "m m m m . . . . r r r r"
+    "m m m m . . . . r r r r";
+}
+footer div {
+  margin-bottom: 40px;
+}
+.spense-desc {
+  grid-area: s;
+}
+.company {
+  grid-area: c;
+}
+.opportunities {
+  grid-area: o;
+}
+.sitemap {
+  grid-area: m;
+  margin-bottom: 0;
+}
+.resources {
+  grid-area: r;
+  margin-bottom: 0;
+}
+footer ul {
+  list-style: none;
+}
+footer h4 {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+footer p,
+footer li {
+  line-height: 28px;
+}
+footer a,
+footer p {
+  color: var(--pColor);
+}
+@media (min-width: 485px) {
+  footer {
+    grid-template-areas:
+      "s s s s s s s s s s s s"
+      "s s s s s s s s s s s s"
+      "c c c c . . . . . o o o"
+      "c c c c . . . . . o o o"
+      "m m m m . . . . . r r r"
+      "m m m m . . . . . r r r";
+  }
+}
+@media (min-width: 600px) {
+  .fa-bars {
+    display: none;
+  }
+  .nav-links,
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-links {
+    margin-left: auto;
+  }
+  .nav-links li {
+    margin-right: 16px;
+  }
+  .first-li-login {
+    margin-right: 16px;
+  }
+  .hero-image {
+    background: url(./Assets/Hero-Image-Tablet.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+  }
+  .pinterest,
+  .twitter {
+    display: inline-block;
+  }
+  .secure {
+    height: 550px;
+    background: url(./Assets/phone-mockup-tablet.png), var(--primaryColor);
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  footer {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "s s s s s . m m m r r r"
+      "s s s s s . m m m r r r"
+      "c c c c o o o o . . . ."
+      "c c c c o o o o . . . .";
+  }
+  .opportunities,
+  .company {
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 1025px) {
+  .nav-links {
+    margin-left: 0px;
+  }
+  .logo,
+  .login {
+    flex: 1;
+  }
+  .login {
+    justify-content: flex-end;
+  }
+  nav,
+  .hero,
+  .media,
+  footer {
+    padding-left: calc((100vw - 925px) / 2);
+    padding-right: calc((100vw - 925px) / 2);
+  }
+  .secure,
+  .text-editor {
+    margin-left: calc((100vw - 925px) / 2);
+    margin-right: calc((100vw - 925px) / 2);
+  }
+  .reddit,
+  .google,
+  .slack {
+    display: inline-block;
+  }
+  .hero {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .hero-image {
+    order: 2;
+    background: url(./Assets/Hero-Image-Desktop.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+  }
+  .hero-content {
+    margin-right: 20px;
+  }
+  .hero-btn {
+    cursor: pointer;
+  }
+  .secure {
+    height: 325px;
+    background: url(./Assets/phone-mockup-desktop.png), var(--primaryColor);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+  }
+  .secure > * {
+    max-width: 400px;
+  }
+  .text-editor {
+    margin-bottom: 0;
+  }
+  footer {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "s s s s m m r r c c o o"
+      "s s s s m m r r c c o o";
+  }
+  .spense-desc {
+    margin-bottom: 0;
+    margin-right: 25px;
+  }
+}
